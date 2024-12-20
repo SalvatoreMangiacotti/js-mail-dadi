@@ -53,33 +53,45 @@ else {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // GIOCO DEI DADI
 
-// Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. Stabilire il vincitore, in base a chi fa il punteggio più alto.Prima di partire a scrivere codice poniamoci qualche domanda:
+// Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
+// Stabilire il vincitore, in base a chi fa il punteggio più alto.
+// Prima di partire a scrivere codice poniamoci qualche domanda:
 // Che ci sia un array da qualche parte?
 // Se dobbiamo confrontare qualcosa che “cosa” ci serve?
+
+// Math.random di default crea numeri compresi tra 0 e meno di 1.
+// Il numero generato da Math.random viene moltiplicato per 6 + 1.
+// Il risultato viene arrotondato per difetto con Math.floor,quindi il numero massimo ottenibile sarà 6.
+
+
+const playerDice = Math.floor(Math.random() * 6) + 1;
+const computerDice = Math.floor(Math.random() * 6) + 1;
+let andTheWinnerIs;
+
+console.log(` Il tuo numero : ${playerDice} 🎲`);
+console.log(`Il numero dell'avversario : ${computerDice} 🎲`);
+
+
+//SE il numero del giocatore è più alto di quello del computer
+if (playerDice > computerDice) {
+
+    // ALLORA vince il giocatore
+    andTheWinnerIs = "Complimenti, hai vinto! 🎉";
+
+}
+//SE il numero del giocatore è più basso di quello del computer
+else if (playerDice < computerDice) {
+
+    // ALLORA vince il computer
+    andTheWinnerIs = "Ha vinto il computer 🤖";
+
+} else {
+
+    // ALTRIMENTI sarà pareggio
+    andTheWinnerIs = "E' un pareggio, che partita emozionante! 🤝";
+
+}
+
+console.log(andTheWinnerIs);
