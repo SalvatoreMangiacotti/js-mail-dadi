@@ -32,10 +32,6 @@ for (i = 0; i < partyListEmail.length; i++) {
         break;
 
     }
-    // ALTRIMENTI onTheList rimarrà invariato (Non è strettamente necessario includere un else)
-    else {
-        onTheList;
-    }
 
 }
 
