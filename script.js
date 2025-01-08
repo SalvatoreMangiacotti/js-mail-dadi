@@ -66,7 +66,7 @@ const playerDice = Math.floor(Math.random() * 6) + 1;
 const computerDice = Math.floor(Math.random() * 6) + 1;
 let andTheWinnerIs;
 
-console.log(` Il tuo numero : ${playerDice} 🎲`);
+console.log(`Il tuo numero : ${playerDice} 🎲`);
 console.log(`Il numero dell'avversario : ${computerDice} 🎲`);
 
 
